@@ -45,15 +45,11 @@ export function createEmployee(salary: number): Director | Teacher {
   return new Director();
 }
 
-// import { Director, Teacher, DirectorInterface, TeacherInterface } from "./main";
+export type Subjects = "Math" | "History";
 
-export function isDirector(employee: DirectorInterface | TeacherInterface): employee is Director {
-  return (employee as Director).workDirectorTasks !== undefined;
-}
-
-export function executeWork(employee: DirectorInterface | TeacherInterface): string {
-  if (isDirector(employee)) {
-    return employee.workDirectorTasks();
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
   }
-  return (employee as Teacher).workTeacherTasks();
+  return "Teaching History";
 }
