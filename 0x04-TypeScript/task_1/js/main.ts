@@ -30,7 +30,7 @@ export interface StudentClassConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-export class StudentClass implements StudentClassInterface {
+class StudentClass {
   private firstName: string;
   private lastName: string;
 
