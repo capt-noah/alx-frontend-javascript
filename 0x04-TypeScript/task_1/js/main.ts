@@ -13,7 +13,7 @@ interface Director extends Teacher{
 }
 
 
-export interface printTeacherFunction {
+export interface printTeacher {
   (firstName: string, lastName: string): string;
 }
 
